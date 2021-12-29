@@ -10,7 +10,7 @@ function colatz(number) {
       var prevNum = num.toString()
       num = num/2
       var currNum = num.toString()
-      console.log(num)
+      // console.log(num)
       var node = document.querySelector(".cla");
       div = document.createElement("div");
       div.className = `text-center w-full bg-green-300 rounded-md text-white py-3 font-medium outline-none`;
@@ -20,14 +20,14 @@ function colatz(number) {
       var prevNum = num.toString()
       num = (num * 3) + 1
       var currNum = num.toString()
-      console.log(num)
+      // console.log(num)
       var node = document.querySelector(".cla");
       div = document.createElement("div");
       div.className = `text-center w-full bg-red-300 rounded-md text-white py-3 font-medium outline-none`;
       div.innerHTML = "( " + prevNum + " x 3 ) + 1 = " + currNum;
       node.parentNode.insertBefore(div, node.prevSibling);
     } if (num == 1){
-      console.log("End of solution")
+      // console.log("End of solution")
       var node = document.querySelector(".cla");
       div = document.createElement("div");
       div.className = `text-center w-full bg-gray-700 rounded-md text-white py-3 font-medium outline-none`;
