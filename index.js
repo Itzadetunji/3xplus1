@@ -1,10 +1,18 @@
 function colatz(number) {
   var num = number
-  var node = document.querySelector(".cla");
-  div = document.createElement("p");
-  div.className = `text-center w-full text-black font-medium`;
-  div.innerHTML = "Here is the solution for: " + number + " 👇🏿";
-  node.parentNode.insertBefore(div, node.prevSibling);
+  if (num <= 0) {
+    var node = document.querySelector(".cla");
+    div = document.createElement("p");
+    div.className = `text-center w-full text-black font-medium`;
+    div.innerHTML = "Negative numbers and zero do not follow this principle. \n Please Refresh 😁";
+    node.parentNode.insertBefore(div, node.prevSibling);
+  }else{
+    var node = document.querySelector(".cla");
+    div = document.createElement("p");
+    div.className = `text-center w-full text-black font-medium`;
+    div.innerHTML = "Here is the solution for: " + number + " 👇🏿";
+    node.parentNode.insertBefore(div, node.prevSibling);
+  }
   while(num > 1){
     if (num % 2 == 0) {
       var prevNum = num.toString()
